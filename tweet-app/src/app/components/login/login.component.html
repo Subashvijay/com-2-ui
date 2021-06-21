@@ -1,0 +1,48 @@
+<div class="" style="height: 900px;">>
+    <div class="row mx-auto bg-light container login-container rounded">
+        <div class="col-12">
+            <div class="row pt-2">
+                <div class="col">
+                    <img src="assets/twitter.png" class="img-fluid border p-0" style="width: 81px; border-radius: 20px;"
+                        alt="">
+                </div>
+                <div class="col-9 pt-3">
+                    <h1>Join Twitter today.</h1>
+                </div>
+            </div>
+        </div>
+        <div [formGroup]="loginForm" class="form-group p-3">
+
+            <input type="email" class="form-control" formControlName="email" style="height: 70px;" placeholder="Email">
+            <small *ngIf="loginForm.get('email').errors && loginForm.get('email').touched" id="helpId"
+                class="form-text text-danger">Enter valid
+                email.</small>
+
+            <input type="password" class="form-control mt-3" formControlName="password" style="height: 70px;"
+                placeholder="Password">
+            <small *ngIf="loginForm.get('password').errors && loginForm.get('password').touched" id="helpId"
+                class="form-text text-danger">Password should contain minimum 8 character</small>
+
+            <div class="row pt-3">
+                <div class="col-6">
+                    <button type="button" style="height: 60px; " (click)="login()"
+                        class="btn w-100 btn-info text-light">
+                        <h5>Login</h5>
+                    </button>
+                </div>
+                <div class="col-6">
+                    <button [routerLink]="'signUp'" (click)="onSignupClick()" type="button" style="height: 60px;"
+                        class="btn w-100 btn-info text-light">
+                        <h5>SignUp</h5>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row pd-2">
+            <a href="./home">
+                <h5>Forgot password?</h5>
+            </a>
+        </div>
+
+    </div>
+</div>

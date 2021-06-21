@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+input.ng-invalid.ng-touched{
+    
+    border: 2px solid #e74c3c !important; 
+}
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// Default variable overrides   
+// $theme-colors: (
+//   "primary":    $cyan,
+//   "secondary":  $secondary,
+//   "success":    $success,
+//   "info":       $info,
+//   "warning":    $warning,
+//   "danger":     $danger,
+//   "light":      $light,
+//   "dark":       $dark
+// );
+// Required
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Bootstrap and its default variables
+
+// Optional Bootstrap components here
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+// etc
+
+
+@import "../node_modules/bootstrap/scss/variables";
+
+@import "bootstrap";    

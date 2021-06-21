@@ -1,0 +1,66 @@
+<div class="" style="height: 900px;">>
+    <div class="row mx-auto border-dark bg-light container login-container rounded">
+        <div class="col-12">
+            <div class="row pt-2">
+                <div class="col">
+                    <img src="assets/twitter.png" class="img-fluid border p-0" style="width: 81px; border-radius: 20px;"
+                        alt="">
+                </div>
+                <div class="col-9 pt-3">
+                    <h1>Create your account.</h1>
+                </div>
+            </div>
+        </div>
+        <div [formGroup]="signUpForm" class="form-group p-3">
+
+            <input type="text" class="form-control" formControlName="firstName" style="height: 70px;"
+                placeholder="First name">
+            <small *ngIf="signUpForm.get('firstName').errors && signUpForm.get('firstName').touched"
+                class="form-text text-danger">First name should not be empty.</small>
+
+            <input type="text" class="form-control mt-3" formControlName="lastName" style="height: 70px;"
+                placeholder="Last name">
+
+            <input type="text" class="form-control mt-3" formControlName="contactNumber" style="height: 70px;"
+                placeholder="contactNumber">
+            <small *ngIf="signUpForm.get('contactNumber').errors && signUpForm.get('contactNumber').touched"
+                class="form-text text-danger">Enter contact number and it must be 10 digit.</small>
+
+            <input type="email" class="form-control mt-3" formControlName="email" style="height: 70px;"
+                placeholder="Email">
+            <small *ngIf="signUpForm.get('email').errors && signUpForm.get('email').touched"
+                class="form-text text-danger">Enter valid
+                email.</small>
+
+            <div class="row mt-3">
+                <div class="col-12 col-md-6">
+                    <input type="password" class="form-control" formControlName="password" style="height: 70px;"
+                        placeholder="Password">
+                    <small *ngIf="signUpForm.get('password').errors && signUpForm.get('password').touched"
+                        class="form-text text-danger">Password should contain minimum 8 character</small>
+                </div>
+                <div class="col-12 col-md-6 pt-md-0 pt-3">
+                    <input type="password" class="form-control" (blur)="onblurConfirmPass()"
+                        formControlName="confirmPassword" style="height: 70px;" placeholder="Confirm Password">
+                    <small *ngIf="signUpForm.get('confirmPassword').errors && signUpForm.get('confirmPassword').touched"
+                        class="form-text text-danger">Password and confirm password are not same</small>
+                </div>
+            </div>
+
+
+            <div class="row pt-3">
+                <div class="col-6">
+                    <button type="button" style="height: 60px;" class="btn w-100 btn-info text-light">
+                        <h5>SignUp</h5>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row pd-2">
+            <a href="./home">
+                <h5>Forgot password?</h5>
+            </a>
+        </div>
+
+    </div>
+</div>

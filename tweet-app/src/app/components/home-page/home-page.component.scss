@@ -1,0 +1,26 @@
+.camera{
+    position: relative;
+    top: 35px;
+    right: 22px;
+    font-size: 21px;
+    color: #6f42c1;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(17, 221, 248); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 225, 255); 
+}
